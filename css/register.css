@@ -7,6 +7,7 @@ body {
   background-size: 100vw auto;
   background-repeat: no-repeat;
   background-position-y: bottom;
+  background-attachment: fixed;
   color: white;
   height: 100%;
 }
@@ -16,12 +17,20 @@ body {
 }
 
 .text_up {
-  padding-top: 12%;
-  text-align: center;
+  padding-top: 15%;
 }
 
 .text_below {
   margin-top: 2%;
+}
+
+.text_warp {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; */
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .tip_text {
@@ -63,21 +72,21 @@ select {
 }
 
 .submit {
-    clear: both;
   width: 36vw;
   margin-left: 32vw;
-  margin-top: 14%;
+  /* margin-top: 20%; */
   border-radius: 5px;
   text-align: center;
   border: #a59f59 solid 1px;
   padding: 2% 0;
+  margin-bottom: 10%;
 }
 
 label {
   vertical-align: bottom;
 }
-input[type="radio"],
-input[type="checkbox"] {
+
+input[type="radio"] {
   vertical-align: bottom;
 }
 
@@ -93,8 +102,8 @@ input[type="checkbox"] {
 }
 
 .radio-beauty-container .radio-beauty {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   box-sizing: border-box;
   display: inline-block;
   border: 1px solid #a59f59;
@@ -103,8 +112,7 @@ input[type="checkbox"] {
   transition: 0.2s;
 }
 
-.radio-beauty-container input[type="radio"]:checked + .radio-beauty,
-input[type="checkbox"]:checked + .radio-beauty {
+.radio-beauty-container input[type="radio"]:checked + .radio-beauty {
   border: solid 1px #a59f59;
   padding: 3px;
   background-color: #a59f59;
@@ -112,6 +120,76 @@ input[type="checkbox"]:checked + .radio-beauty {
 }
 
 .tel {
-  clear: both;
   margin-top: 13%;
+  clear: both;
+}
+
+/* 弹出提示框 */
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background-color: #777;
+  opacity: 0.5;
+  display: none;
+}
+
+.tips {
+  background-color: #d8d4c4;
+  color: black;
+  position: absolute;
+  border-radius: 6px;
+  z-index: 10000;
+  width: auto;
+  width: 66vw;
+  margin: 0 17vw;
+  visibility: hidden;
+}
+.tips_container {
+  height: 100%;
+  width: 100%;
+}
+.tips_header {
+  text-align: center;
+  margin-top: 6%;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.tips_text_front {
+  text-align: center;
+  margin-top: 3%;
+}
+.tips_text_below {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.tips_btn {
+  float: left;
+  border: black solid 1px;
+  border-radius: 5px;
+  margin-top: 6%;
+  margin-bottom: 5%;
+  width: 40%;
+  padding: 3% 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+.confirm {
+  margin-left: 7%;
+}
+.cancel {
+  margin-left: 6%;
+}
+.error {
+  clear: both;
+  min-height: 2rem;
+  margin-top: 20%;
+  text-align: center;
+  color: #d33c07;
+  font-size: 1.2rem;
 }

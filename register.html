@@ -11,8 +11,21 @@
     <link rel="stylesheet" href="css/register.css" />
   </head>
   <body>
-    <div class="text_up" id="text_up">请您填写以下信息便于联系对方</div>
-    <div class="text_below" id="text_below">信息只对TA可见噢</div>
+    <div id="overlay" class="overlay"></div>
+    <div class="tips" id="tips">
+      <div class="tips_header">提示</div>
+      <div class="tips_text_front">信息提交后不能修改噢</div>
+      <div class="tips_text_below">请您确认无误后再提交</div>
+      <div class="confirm tips_btn" onclick="Confirm()">确认</div>
+      <div class="cancel tips_btn" onclick="cancel()">取消</div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="text_warp" id="text_warp">
+      <div class="text_up" id="text_up">请您填写以下信息便于联系对方</div>
+      <div class="text_below" id="text_below">信息只对TA可见噢</div>
+    </div>
+
     <div class="nickname tip_text">昵称</div>
     <input class="tip_text" type="text" id="nickname" />
     <div class="grade tip_text tag">年级</div>
@@ -48,28 +61,24 @@
         <span>女</span>
       </label>
     </form>
-
+    <!-- <div style="clear: both;"></div> -->
     <div class="tel tip_text tag">手机</div>
     <input class="tip_text" type="text" id="tel" />
+
     <div class="wechat tip_text tag">微信</div>
     <input class="tip_text" type="text" id="wechat" />
+
     <div class="expectation tip_text tag">期望匹配性别</div>
     <form class="tip_text radio-beauty-container" id="expectation">
       <label class="switch">
-        <input
-          type="checkbox"
-          name="expectation"
-          value="男"
-          id="exp_boy"
-          hidden
-        />
+        <input type="radio" name="expectation" value="男" id="exp_boy" hidden />
         <label for="exp_boy" class="radio-beauty"></label>
         <span>男</span>
       </label>
       <label class="switch back">
         <input
           class="back"
-          type="checkbox"
+          type="radio"
           name="expectation"
           value="女"
           id="exp_girl"
@@ -78,7 +87,21 @@
         <label for="exp_girl" class="radio-beauty"></label>
         <span>女</span>
       </label>
+      <label class="switch back">
+        <input
+          class="back"
+          type="radio"
+          name="expectation"
+          value="随机"
+          id="exp_all"
+          hidden
+        />
+        <label for="exp_all" class="radio-beauty"></label>
+        <span>随机</span>
+      </label>
     </form>
+    <div class="error" id="error"></div>
+
     <div id="submit" class="submit" onclick="submit()">
       完&nbsp;&nbsp;&nbsp;&nbsp;成
     </div>
