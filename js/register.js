@@ -11,7 +11,7 @@ var disable = false; // 按钮是否禁用
 function submit() {
     document.getElementById('error').innerText = "";
     if (!disable) {
-        document.getElementById('overlay').style.display = "inline";
+        document.getElementById('overlay').style.display = "block";
         document.getElementById('tips').style.visibility = "visible";
     }
 }
@@ -50,6 +50,7 @@ function Confirm() {
             disable = true;
             fetch("url", {
                 method: "post",
+                credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json'
                 },

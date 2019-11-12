@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    background-color: #273453;
+    background-image: url(../img/mm_star_bg.png);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    color: white;
+    height: 100%;
+}
+
+.tips{
+    margin-left: 4vw;
+}
+.tips_front{
+    padding-top: 4vh;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>电影对对碰</title>
+    <link rel="stylesheet" href="css/result.css" />
+  </head>
+  <body>
+    <div class="header">配对结果</div>
+    <div class="info_wrap">
+      <div class="matching hidden" id="matching">
+        <div class="text1">我们正在火速为您配对对象中，</div>
+        <div class="text2">请您再等等。</div>
+      </div>
+
+      <div class="success hidden" id="success">
+        <div class="text_wrap">
+          <div class="text1">恭喜你匹配成功</div>
+          <div class="text2">快去和TA相邀雕刻盛典吧</div>
+        </div>
+        <hr class="hor_line" />
+        <div class="info">
+          <div class="nickname info_text" id="nickname">昵称</div>
+          <div class="gg info_text">
+            <span id="grade">年级</span
+            ><span id="gender" class="gender">性别</span>
+          </div>
+          <div class="tel info_text" id="tel">手机号</div>
+          <div class="wechat info_text" id="wechat">微信号</div>
+        </div>
+      </div>
+    </div>
+    <div class="btn hidden" onclick="back()">返回主页</div>
+    <script>
+      function toWish() {
+        window.location.href = "";
+      }
+    </script>
+  </body>
+</html>
