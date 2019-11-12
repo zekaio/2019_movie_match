@@ -63,6 +63,7 @@ select {
 }
 
 .submit {
+    clear: both;
   width: 36vw;
   margin-left: 32vw;
   margin-top: 14%;
@@ -72,40 +73,45 @@ select {
   padding: 2% 0;
 }
 
-label{
-    vertical-align: bottom;
+label {
+  vertical-align: bottom;
 }
-input[type="radio"],input[type="checkbox"]{
-    vertical-align:bottom;
-}
-
-.back{
-    margin-left: 10vw;
+input[type="radio"],
+input[type="checkbox"] {
+  vertical-align: bottom;
 }
 
+.back {
+  margin-left: 10vw;
+}
 
-/* 单选框美化 */
+/* 单选/复选框美化 */
 .switch {
-    display: flex;
-    align-items: center;
-    float: left;
-    margin-top: 4.5%;
-  
-  }
-  .radio-beauty-container .radio-beauty {
-    width: 16px;
-    height: 16px;
-    box-sizing: border-box;
-    /* display: inline-block; */
-    border: 1px solid #d7d7d7;
-    margin: 0 5px;
-    border-radius: 50%;
-    transition: 0.2s;
-  }
-  .radio-beauty-container input[type="radio"]:checked+.radio-beauty {
-    border: solid 1px white;
-    padding: 3px;
-    background-color: white;
-    background-clip: content-box;
-    box-shadow: inset 0 0 1px rgba(0,128,0, 0.2), 0 0 3px green;
-  }
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.radio-beauty-container .radio-beauty {
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #a59f59;
+  margin-right: 5px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.radio-beauty-container input[type="radio"]:checked + .radio-beauty,
+input[type="checkbox"]:checked + .radio-beauty {
+  border: solid 1px #a59f59;
+  padding: 3px;
+  background-color: #a59f59;
+  background-clip: content-box;
+}
+
+.tel {
+  clear: both;
+  margin-top: 13%;
+}

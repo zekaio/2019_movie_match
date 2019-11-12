@@ -27,21 +27,61 @@
       <option value="研二">研二</option>
       <option value="研三">研三</option>
     </select>
+
     <div class="gender tip_text tag">性别</div>
-    <form class="tip_text" id="gender">
-      <input type="radio" name="gender" value="男" /><label>男</label>
-      <input class="back" type="radio" name="gender" value="女" /><label>女</label>
+    <form class="tip_text radio-beauty-container" id="gender">
+      <label class="switch">
+        <input type="radio" name="gender" value="男" id="boy" hidden />
+        <label for="boy" class="radio-beauty"></label>
+        <span>男</span>
+      </label>
+      <label class="switch back">
+        <input
+          class="back"
+          type="radio"
+          name="gender"
+          value="女"
+          id="girl"
+          hidden
+        />
+        <label for="girl" class="radio-beauty"></label>
+        <span>女</span>
+      </label>
     </form>
+
     <div class="tel tip_text tag">手机</div>
     <input class="tip_text" type="text" id="tel" />
     <div class="wechat tip_text tag">微信</div>
     <input class="tip_text" type="text" id="wechat" />
     <div class="expectation tip_text tag">期望匹配性别</div>
-    <form class="tip_text" id="expectation">
-      <input type="checkbox" name="expectation" /><label>男</label>
-      <input class="back" type="checkbox" name="expectation" /><label>女</label>
+    <form class="tip_text radio-beauty-container" id="expectation">
+      <label class="switch">
+        <input
+          type="checkbox"
+          name="expectation"
+          value="男"
+          id="exp_boy"
+          hidden
+        />
+        <label for="exp_boy" class="radio-beauty"></label>
+        <span>男</span>
+      </label>
+      <label class="switch back">
+        <input
+          class="back"
+          type="checkbox"
+          name="expectation"
+          value="女"
+          id="exp_girl"
+          hidden
+        />
+        <label for="exp_girl" class="radio-beauty"></label>
+        <span>女</span>
+      </label>
     </form>
-    <div id="submit" class="submit" onclick="submit()">完&nbsp;&nbsp;&nbsp;&nbsp;成</div>
+    <div id="submit" class="submit" onclick="submit()">
+      完&nbsp;&nbsp;&nbsp;&nbsp;成
+    </div>
     <script src="js/register.js"></script>
   </body>
 </html>
