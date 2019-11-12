@@ -1,0 +1,111 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #273453;
+  background-image: url(../img/mm_reg_bg.png);
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  color: white;
+  height: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+.text_up {
+  padding-top: 12%;
+  text-align: center;
+}
+
+.text_below {
+  margin-top: 2%;
+}
+
+.tip_text {
+  margin-left: 22vw;
+}
+
+.nickname {
+  margin-top: 14%;
+  margin-bottom: 2%;
+}
+
+.tag {
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+
+input[type="text"] {
+  background-color: #273453;
+  border: #a59f59 solid 2px;
+  border-radius: 5px;
+  width: 56vw;
+  color: white;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+
+select {
+  box-sizing: border-box;
+  appearance: none;
+  border: #a59f59 solid 2px;
+  border-radius: 5px;
+  background-color: #273453;
+  line-height: 1.5rem;
+  width: 56vw;
+  color: white;
+  height: 1.7rem;
+}
+
+.submit {
+  width: 36vw;
+  margin-left: 32vw;
+  margin-top: 14%;
+  border-radius: 5px;
+  text-align: center;
+  border: #a59f59 solid 1px;
+  padding: 2% 0;
+}
+
+label{
+    vertical-align: bottom;
+}
+input[type="radio"],input[type="checkbox"]{
+    vertical-align:bottom;
+}
+
+.back{
+    margin-left: 10vw;
+}
+
+
+/* 单选框美化 */
+.switch {
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-top: 4.5%;
+  
+  }
+  .radio-beauty-container .radio-beauty {
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    border: 1px solid #d7d7d7;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+  .radio-beauty-container input[type="radio"]:checked+.radio-beauty {
+    border: solid 1px white;
+    padding: 3px;
+    background-color: white;
+    background-clip: content-box;
+    box-shadow: inset 0 0 1px rgba(0,128,0, 0.2), 0 0 3px green;
+  }
