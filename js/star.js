@@ -7,12 +7,6 @@ document.body.style.height = windowHeight + "px";
 let tipsHeight = document.getElementById('tips').offsetHeight;
 document.getElementById('tips').style.marginTop = (windowHeight - tipsHeight) / 2 + "px";
 
-document.body.addEventListener('touchmove', function (e) {
-    e.preventDefault();
-}, {
-    passive: false
-});
-
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -49,13 +43,19 @@ function drawLine(x1, y1, x2, y2) {
 }
 
 if (document.body.ontouchstart !== undefined) {
+    window.ontouchstart = function (e) {
+        canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');
+    };
     // 使用touch事件
     canvas.ontouchstart = function (e) {
         // 开始触摸
         if (!draw) {
+            e.preventDefault();
             document.getElementById('error').innerText = "";
+            let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
             let x = e.touches[0].clientX - padLeft;
-            let y = e.touches[0].clientY - (padTop + padHeight * 0.088058);
+            let y = e.touches[0].clientY - (padTop - scrollTop + padHeight * 0.088058);
             painting = true;
             lastPoint = { x, y };
             ctx.save();
@@ -65,15 +65,19 @@ if (document.body.ontouchstart !== undefined) {
     canvas.ontouchmove = function (e) {
         // 开始滑动
         if (painting) {
+            e.preventDefault();
+            let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+
             let x = e.touches[0].clientX - padLeft;
-            let y = e.touches[0].clientY - (padTop + padHeight * 0.088058);
+            let y = e.touches[0].clientY - (padTop - scrollTop + padHeight * 0.088058);
             let newPoint = { x, y };
             drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
             lastPoint = newPoint;
         }
     }
-    canvas.ontouchend = function () {
+    canvas.ontouchend = function (e) {
         // 滑动结束
+        e.preventDefault();
         painting = false;
         draw = true;
     }
