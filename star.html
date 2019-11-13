@@ -27,7 +27,13 @@
     <div class="tips_front tips">请在下面的框中画一个五角星</div>
     <div class="tips_below tips">我们会根据你所画的五角星帮你匹配有缘人</div>
     <canvas id="canvas" class="canvas"></canvas>
-    <img src="./img/mm_star_sketchpad.png" class="sketchpad" id="sketchpad" />
+    <script src="js/canvasInit.js"></script>
+    <img
+      src="./img/mm_star_sketchpad.png"
+      class="sketchpad"
+      id="sketchpad"
+      onload="canvasInit()"
+    />
     <div class="error" id="error"></div>
     <div class="btn redraw" onclick="redraw()">重画</div>
     <div class="btn complete" onclick="complete()">完成</div>
