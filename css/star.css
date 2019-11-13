@@ -77,7 +77,9 @@ body {
 .tips_front {
   padding-top: 4vh;
 }
+
 .btn {
+  background-color: #273453;
   border: #a59f59 solid 1px;
   border-radius: 5px;
   padding: 2% 0;
@@ -85,9 +87,11 @@ body {
   text-align: center;
   margin-left: 32vw;
 }
+
 .redraw {
   margin-top: 1vh;
 }
+
 .complete {
   margin-top: 3vh;
   margin-bottom: 3vh;

@@ -70,6 +70,7 @@ select {
 }
 
 .submit {
+  background-color: #273453;
   width: 36vw;
   margin-left: 32vw;
   border-radius: 5px;

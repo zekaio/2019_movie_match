@@ -71,6 +71,7 @@ body {
 }
 
 .btn {
+  background-color: #273453;
   display: block;
   margin-top: 5vh;
   border: #a59f59 solid 1px;
