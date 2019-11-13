@@ -35,7 +35,7 @@ body {
   margin-left: 18vw;
 }
 
-.success{
+.success {
   display: block;
 }
 
@@ -65,9 +65,11 @@ body {
 .info_text {
   margin-top: 1vh;
 }
+
 .gender {
   margin-left: 2.5rem;
 }
+
 .btn {
   display: block;
   margin-top: 5vh;

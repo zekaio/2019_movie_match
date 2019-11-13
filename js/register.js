@@ -1,6 +1,5 @@
 var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
-// 固定body高度
 document.body.style.height = windowHeight + "px";
 
 //提示框垂直居中

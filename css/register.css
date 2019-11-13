@@ -121,7 +121,6 @@ input[type="radio"] {
 }
 
 /* 弹出提示框 */
-
 .overlay {
   position: fixed;
   top: 0px;
@@ -145,20 +144,24 @@ input[type="radio"] {
   margin: 0 17vw;
   visibility: hidden;
 }
+
 .tips_container {
   height: 100%;
   width: 100%;
 }
+
 .tips_header {
   text-align: center;
   margin-top: 6%;
   font-size: 1.3em;
   font-weight: bold;
 }
+
 .tips_text_front {
   text-align: center;
   margin-top: 3%;
 }
+
 .tips_text_below {
   text-align: center;
   margin-top: 3%;
@@ -175,12 +178,15 @@ input[type="radio"] {
   text-align: center;
   box-sizing: border-box;
 }
+
 .confirm {
   margin-left: 7%;
 }
+
 .cancel {
   margin-left: 6%;
 }
+
 .error {
   clear: both;
   min-height: 2rem;

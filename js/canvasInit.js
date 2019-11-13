@@ -19,9 +19,7 @@ function canvasInit() {
   ctx.strokeStyle = "#c4b46b";
   ctx.beginPath();
   if (document.body.ontouchstart !== undefined) {
-    // 使用touch事件
     canvas.ontouchstart = function (e) {
-      // 开始触摸
       if (!draw) {
         e.preventDefault();
         document.getElementById('error').innerText = "";
@@ -35,7 +33,6 @@ function canvasInit() {
       }
     }
     canvas.ontouchmove = function (e) {
-      // 开始滑动
       if (painting) {
         e.preventDefault();
         let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
@@ -47,7 +44,6 @@ function canvasInit() {
       }
     }
     canvas.ontouchend = function (e) {
-      // 滑动结束
       painting = false;
       draw = true;
     }

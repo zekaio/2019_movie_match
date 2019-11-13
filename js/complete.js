@@ -1,3 +1,3 @@
-function toWish(){
+function toWish() {
     // window.location.href = "";
 }

@@ -14,12 +14,14 @@ body {
   color: white;
   height: 100%;
 }
+
 .top_img {
   width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .img {
   width: 20vw;
   margin: 20vh 40vw 5vh;
