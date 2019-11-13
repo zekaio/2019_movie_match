@@ -1,22 +1,116 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html,body{
-    background-color: #273453;
-    background-image: url(../img/mm_star_bg.png);
-    background-size: 100vw auto;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-attachment: fixed;
-    color: white;
-    height: 100%;
+html,
+body {
+  background-color: #273453;
+  background-image: url(../img/mm_reg_bg.png);
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  color: white;
+  height: 100%;
+}
+/* 弹出提示框 */
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background-color: #777;
+  opacity: 0.5;
+  display: none;
+}
+.tip {
+  background-color: #d8d4c4;
+  color: black;
+  position: absolute;
+  border-radius: 6px;
+  z-index: 10000;
+  width: 80vw;
+  margin: 0 10vw;
+  /* visibility: hidden; */
 }
 
-.tips{
-    margin-left: 4vw;
+.tips_header {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 8%;
+  margin-bottom: 11%;
 }
-.tips_front{
-    padding-top: 4vh;
+
+.tips_one {
+  margin: 0 5%;
+  text-align: center;
+}
+.tips_two {
+  margin: 3% 5% 0;
+  text-align: center;
+}
+.tips_three {
+  margin: 3% 5% 0;
+  text-align: center;
+}
+.tips_close {
+  border: black solid 1px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 22% auto 6%;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.tips {
+  margin-left: 4vw;
+}
+.tips_front {
+  padding-top: 4vh;
+}
+.btn {
+  border: #a59f59 solid 1px;
+  border-radius: 5px;
+  padding: 2% 0;
+  width: 34vw;
+  text-align: center;
+  margin-left: 32vw;
+}
+.redraw {
+  margin-top: 1vh;
+}
+.complete {
+  margin-top: 3vh;
+}
+
+.sketchpad {
+  width: 100vw;
+  margin-top: 13vh;
+}
+
+.canvas {
+  position: absolute;
+  /* width: 80vw; */
+  /* height: 40vh; */
+  margin-left: 19.21vw;
+  margin-right: 19.21vw;
+  width: 61.58vw;
+  z-index: 1000;
+  /* background-color: red; */
+  /* margin-left: ; */
+}
+
+.error {
+  clear: both;
+  min-height: 2rem;
+  margin-top: 3vh;
+  text-align: center;
+  color: #d33c07;
+  font-size: 1.2rem;
 }

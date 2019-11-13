@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>电影对对碰</title>
-  <link rel="stylesheet" href="css/star.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>电影对对碰</title>
+    <link rel="stylesheet" href="css/star.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <div class="tip" id="tips">
+      <div class="tips_header">对对碰规则</div>
+      <div class="tips_one">1.可供参与者选择拍档的性别</div>
+      <div class="tips_two">
+        2.成功配对者两人均需出示截图或其他可证明对方为自己配对对象的东西，两人均可于盛典当晚获得奖品
+      </div>
+      <div class="tips_three">
+        3.需要填写参与者基本信息，如姓名、年级、联系方式（微信号和手机号）
+      </div>
+      <div class="tips_close" onclick="closeTips()">X</div>
+    </div>
+
     <div class="tips_front tips">请在下面的框中画一个五角星</div>
     <div class="tips_below tips">我们会根据你所画的五角星帮你匹配有缘人</div>
-    
-<script src="js/star.js"></script>
-</body>
+    <canvas id="canvas" class="canvas"></canvas>
+    <img src="./img/mm_star_sketchpad.png" class="sketchpad" id="sketchpad" />
+    <div class="error" id="error"></div>
+    <div class="btn redraw" onclick="redraw()">重画</div>
+    <div class="btn complete" onclick="complete()">完成</div>
+    <script src="js/star.js"></script>
+  </body>
 </html>

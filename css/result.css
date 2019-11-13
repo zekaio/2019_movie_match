@@ -30,17 +30,12 @@ body {
 }
 
 .matching {
-  /* display: block; */
   width: fit-content;
   margin-left: 18vw;
 }
 
 .text2 {
   margin-top: 1vh;
-}
-
-.success {
-  /* display: block; */
 }
 
 .text_wrap {
@@ -62,14 +57,13 @@ body {
   margin-left: 20vw;
 }
 
-.info_text{
-    margin-top: 1vh;
+.info_text {
+  margin-top: 1vh;
 }
-.gender{
-    margin-left: 2.5rem;
+.gender {
+  margin-left: 2.5rem;
 }
 .btn {
-    /* display: block; */
   margin-top: 5vh;
   border: #a59f59 solid 1px;
   border-radius: 5px;
