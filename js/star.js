@@ -5,8 +5,6 @@ document.body.style.height = windowHeight + "px";
 let tipsHeight = document.getElementById('tips').offsetHeight;
 document.getElementById('tips').style.marginTop = (windowHeight - tipsHeight) / 2 + "px";
 
-
-
 function closeTips() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('tips').style.visibility = 'hidden';
