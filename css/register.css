@@ -63,6 +63,7 @@ select {
   border-radius: 5px;
   background-color: #273453;
   line-height: 1.5rem;
+  padding: 0 0.2rem;
   width: 56vw;
   color: white;
   height: 1.7rem;
