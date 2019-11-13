@@ -46,6 +46,7 @@ if (document.body.ontouchstart !== undefined) {
     window.ontouchstart = function (e) {
         canvas = document.getElementById('canvas');
         ctx = canvas.getContext('2d');
+        ctx.strokeStyle = '#c4b46b';
     };
     // 使用touch事件
     canvas.ontouchstart = function (e) {
