@@ -30,6 +30,7 @@ body {
 }
 
 .matching {
+  display: block;
   width: fit-content;
   margin-left: 18vw;
 }
