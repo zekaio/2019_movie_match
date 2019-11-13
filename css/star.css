@@ -99,7 +99,7 @@ body {
 
 .sketchpad {
   width: 100vw;
-  margin-top: 13vh;
+  margin-top: 10vh;
 }
 
 .canvas {
@@ -117,7 +117,7 @@ body {
 .error {
   clear: both;
   min-height: 2rem;
-  margin-top: 3vh;
+  margin-top: 2vh;
   text-align: center;
   color: #d33c07;
   font-size: 1.2rem;
