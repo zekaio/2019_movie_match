@@ -22,7 +22,7 @@ body {
 }
 
 .info_wrap {
-  margin-top: 28%;
+  margin-top: 15%;
 }
 
 .hidden {
@@ -69,6 +69,7 @@ body {
   margin-left: 2.5rem;
 }
 .btn {
+  display: block;
   margin-top: 5vh;
   border: #a59f59 solid 1px;
   border-radius: 5px;

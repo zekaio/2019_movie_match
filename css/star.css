@@ -45,23 +45,30 @@ body {
   margin-bottom: 11%;
 }
 
+.tips_container{
+  /* text-align: center;
+   */
+   width: fit-content;
+   margin-left: 7%;
+   margin-right: 7%;
+}
 .tips_one {
-  margin: 0 5%;
-  text-align: center;
+  /* margin: 0; */
+  /* text-align: center; */
 }
 .tips_two {
-  margin: 3% 5% 0;
-  text-align: center;
+  margin-top: 3%;
+  /* text-align: center; */
 }
 .tips_three {
-  margin: 3% 5% 0;
-  text-align: center;
+  margin-top: 3%;
+  /* text-align: center; */
 }
 .tips_close {
   border: black solid 1px;
   text-align: center;
   font-size: 1rem;
-  margin: 22% auto 6%;
+  margin: 10% auto 6%;
   line-height: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
