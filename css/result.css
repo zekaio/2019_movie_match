@@ -30,9 +30,13 @@ body {
 }
 
 .matching {
-  display: block;
+  /* display: block; */
   width: fit-content;
   margin-left: 18vw;
+}
+
+.success{
+  display: block;
 }
 
 .text2 {

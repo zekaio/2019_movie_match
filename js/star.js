@@ -7,11 +7,6 @@ document.body.style.height = windowHeight + "px";
 let tipsHeight = document.getElementById('tips').offsetHeight;
 document.getElementById('tips').style.marginTop = (windowHeight - tipsHeight) / 2 + "px";
 
-function closeTips() {
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById('tips').style.visibility = 'hidden';
-}
-
 document.body.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, {
@@ -66,7 +61,6 @@ if (document.body.ontouchstart !== undefined) {
             ctx.save();
             drawCircle(x, y, 0);
         }
-
     }
     canvas.ontouchmove = function (e) {
         // 开始滑动
@@ -83,6 +77,11 @@ if (document.body.ontouchstart !== undefined) {
         painting = false;
         draw = true;
     }
+}
+
+function closeTips() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('tips').style.visibility = 'hidden';
 }
 
 function redraw() {
