@@ -16,7 +16,7 @@ body {
 }
 /* 弹出提示框 */
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   height: 100vh;
@@ -24,12 +24,12 @@ body {
   z-index: 9999;
   background-color: #777;
   opacity: 0.5;
-  display: none;
+  /* display: none; */
 }
 .tip {
   background-color: #d8d4c4;
   color: black;
-  position: absolute;
+  position: fixed;
   border-radius: 6px;
   z-index: 10000;
   width: 80vw;
