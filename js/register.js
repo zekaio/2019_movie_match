@@ -74,7 +74,7 @@ function Confirm() {
         .then(checkStatus)
         .then(res => res.json())
         .then(res => {
-          //   window.location.href = "complete.html";
+            window.location.href = "complete.html";
         })
         .catch(err => {
           disable = false;
