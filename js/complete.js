@@ -1,3 +1,4 @@
 function toWish() {
-    // window.location.href = "";
+  //许愿瓶
+  // window.location.href = "";
 }

@@ -1,3 +1,9 @@
+if (
+  window.localStorage.getItem("match") == 0 ||
+  window.localStorage.getItem("match") == 2
+) {
+  window.location.href = "result.html";
+}
 var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
 var canvas, ctx, padHeight, padTop;
@@ -19,34 +25,40 @@ function canvasInit() {
   ctx.strokeStyle = "#c4b46b";
   ctx.beginPath();
   if (document.body.ontouchstart !== undefined) {
-    canvas.ontouchstart = function (e) {
+    canvas.ontouchstart = function(e) {
       if (!draw) {
         e.preventDefault();
-        document.getElementById('error').innerText = "";
-        let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        document.getElementById("error").innerText = "";
+        let scrollTop =
+          (document.documentElement && document.documentElement.scrollTop) ||
+          document.body.scrollTop;
         let x = e.touches[0].clientX - padLeft;
-        let y = e.touches[0].clientY - (padTop - scrollTop + padHeight * 0.088058);
+        let y =
+          e.touches[0].clientY - (padTop - scrollTop + padHeight * 0.088058);
         painting = true;
         lastPoint = { x, y };
         ctx.save();
         drawCircle(x, y, 0);
       }
-    }
-    canvas.ontouchmove = function (e) {
+    };
+    canvas.ontouchmove = function(e) {
       if (painting) {
         e.preventDefault();
-        let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        let scrollTop =
+          (document.documentElement && document.documentElement.scrollTop) ||
+          document.body.scrollTop;
         let x = e.touches[0].clientX - padLeft;
-        let y = e.touches[0].clientY - (padTop - scrollTop + padHeight * 0.088058);
+        let y =
+          e.touches[0].clientY - (padTop - scrollTop + padHeight * 0.088058);
         let newPoint = { x, y };
         drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
         lastPoint = newPoint;
       }
-    }
-    canvas.ontouchend = function (e) {
+    };
+    canvas.ontouchend = function(e) {
       painting = false;
       draw = true;
-    }
+    };
   }
 }
 
