@@ -123,18 +123,6 @@ input[type="radio"] {
 }
 
 /* 弹出提示框 */
-.overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100vw;
-  z-index: 9999;
-  background-color: #777;
-  opacity: 0.5;
-  display: none;
-}
-
 .tips {
   background-color: #d8d4c4;
   color: black;

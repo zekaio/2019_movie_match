@@ -8,11 +8,25 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>电影对对碰</title>
+    <link rel="stylesheet" href="css/ongoing.css">
     <link rel="stylesheet" href="css/register.css" />
     <script src="js/conf.js"></script>
   </head>
   <body>
-    <div id="overlay" class="overlay"></div>
+    <div class="overlay hidden" id="overlay"></div>
+    <div class="notOngoing" id="notOngoing">
+      <div class="ongoing_header">雕刻时光</div>
+      <div class="ongoing_container">
+          <div class="ongoing_one">现在不在活动时间内噢</div>
+          <div class="ongoing_two">
+              活动时间为2019年11月20日到<span id="ongoing_month"></span>月<span
+                id="ongoing_date"
+              ></span
+              >日
+            </div>
+          </div>
+      <div class="ongoing_btn" onclick="ongoingClose()">确认</div>
+    </div>
     <div class="tips" id="tips">
       <div class="tips_header">提示</div>
       <div class="tips_text_front">信息提交后不能修改噢</div>
@@ -60,7 +74,7 @@
       </label>
     </form>
     <div class="tel tip_text tag">手机</div>
-    <input class="tip_text" type="text" id="tel" />
+    <input class="tip_text" type="text" id="tel" maxlength="11" />
     <div class="wechat tip_text tag">微信</div>
     <input class="tip_text" type="text" id="wechat" />
     <div class="expectation tip_text tag">期望匹配性别</div>

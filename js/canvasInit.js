@@ -1,9 +1,11 @@
+// 已填写信息则跳转到查看结果页面
 if (
   window.localStorage.getItem("match") == 0 ||
   window.localStorage.getItem("match") == 2
 ) {
   window.location.href = "result.html";
 }
+
 var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
 var canvas, ctx, padHeight, padTop;

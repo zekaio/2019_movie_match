@@ -8,10 +8,27 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>电影对对碰</title>
+    <link rel="stylesheet" href="css/ongoing.css" />
     <link rel="stylesheet" href="css/complete.css" />
     <script src="js/conf.js"></script>
   </head>
   <body>
+    <!-- 遮罩层 -->
+    <div class="overlay hidden" id="overlay"></div>
+    <!-- 不在活动时间提示 -->
+    <div class="notOngoing" id="notOngoing">
+      <div class="ongoing_header">雕刻时光</div>
+      <div class="ongoing_container">
+        <div class="ongoing_one">现在不在活动时间内噢</div>
+        <div class="ongoing_two">
+          活动时间为2019年11月20日到<span id="ongoing_month"></span>月<span
+            id="ongoing_date"
+          ></span
+          >日
+        </div>
+      </div>
+      <div class="ongoing_btn" onclick="ongoingClose()">确认</div>
+    </div>
     <img src="./img/mm_com_top.png" class="top_img" />
     <img src="./img/mm_com_img.png" class="img" />
     <div class="text">恭喜你成功提交配对信息</div>
@@ -20,6 +37,11 @@
     <div class="text text_yellow">增加20%许愿值</div>
     <div class="text text_yellow">收集许愿值可以在线下兑换礼物噢</div>
     <div class="btn" onclick="toWish()">我的许愿瓶</div>
-    <script src="js/complete.js"></script>
+    <script>
+      function toWish() {
+        // 跳转到许愿瓶
+        window.location.href = wishSite;
+      }
+    </script>
   </body>
 </html>

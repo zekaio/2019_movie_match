@@ -1,0 +1,58 @@
+/* 弹出提示框 */
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background-color: #777;
+  opacity: 0.5;
+}
+
+.notOngoing {
+  background-color: #d8d4c4;
+  color: black;
+  position: fixed;
+  border-radius: 6px;
+  z-index: 10000;
+  width: auto;
+  width: 66vw;
+  margin: 0 17vw;
+  visibility: hidden;
+}
+
+.ongoing_header {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.ongoing_container {
+  width: fit-content;
+  margin-right: 7%;
+  margin-left: 7%;
+}
+
+.ongoing_one {
+  margin-top: 3%; 
+}
+
+.ongoing_two {
+  margin-top: 3%;
+}
+
+.ongoing_btn {
+  border: black solid 1px;
+  border-radius: 5px;
+  margin: 6% auto 10%;
+  width: 40%;
+  padding: 3% 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}

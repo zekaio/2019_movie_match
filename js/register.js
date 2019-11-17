@@ -14,6 +14,7 @@ document.getElementById("tips").style.marginTop =
   (windowHeight - tipsHeight) / 2 + "px";
 
 var disable = false; // 按钮是否禁用
+
 function submit() {
   document.getElementById("error").innerText = "";
   if (!disable) {

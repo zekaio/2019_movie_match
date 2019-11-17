@@ -1,6 +1,6 @@
 function setResult() {
   switch (window.localStorage.getItem("match")) {
-    case 0:
+    case "0":
       //匹配成功
       let result = window.localStorage.getItem("result");
       document.getElementById("nickname").innerText = result.nickname;
@@ -10,11 +10,11 @@ function setResult() {
       document.getElementById("wechat").innerText = result.wechat;
       document.getElementById("success").style.display = "block";
       break;
-    case 1:
+    case "1":
       //还未填写信息
-      window.location.href = "register.html";
+      window.location.href = "star.html";
       break;
-    case 2:
+    case "2":
       //还未匹配
       document.getElementById("matching").style.display = "block";
       break;
@@ -43,6 +43,11 @@ function setResult() {
           }
           setResult();
         });
+        break;
   }
 }
 setResult();
+
+function back(){
+  window.location.href = homePage;
+}
