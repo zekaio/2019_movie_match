@@ -131,7 +131,7 @@ fetch(prefix + "/match", {
       case 0:
         // 匹配成功
         window.localStorage.setItem("match", 0);
-        window.localStorage.setItem("result", res.data);
+        window.localStorage.setItem("result",JSON.stringify(res.data));
         break;
       case 1:
         // 还未填写信息

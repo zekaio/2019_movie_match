@@ -2,7 +2,7 @@ function setResult() {
   switch (window.localStorage.getItem("match")) {
     case "0":
       //匹配成功
-      let result = window.localStorage.getItem("result");
+      let result =JSON.parse(window.localStorage.getItem("result"));
       document.getElementById("nickname").innerText = result.nickname;
       document.getElementById("grade").innerText = result.grade;
       document.getElementById("gender").innerText = result.gender;
@@ -30,7 +30,7 @@ function setResult() {
             case 0:
               //匹配成功
               window.localStorage.setItem("match", 0);
-              window.localStorage.setItem("result", res.data);
+              window.localStorage.setItem("result", JSON.stringify(res.data));
               break;
             case 1:
               //还未填写信息
