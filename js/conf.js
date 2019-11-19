@@ -1,5 +1,5 @@
-const prefix = "http://111.230.183.100:5000";
-const bbt = "https://hemc.100steps.net/2017/wechat/Home/Index/index?state=";
+const prefix = "http://111.230.183.100:5000"; // api地址
+const bbt = "https://hemc.100steps.net/2017/wechat/Home/Index/index?state="; // 微信认证
 const wishSite = ""; // 许愿瓶地址
 const homePage = ""; // 主页
 
