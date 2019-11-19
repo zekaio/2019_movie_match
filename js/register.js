@@ -8,7 +8,7 @@ var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
 document.body.style.height = windowHeight + "px";
 
-//提示框垂直居中
+// 提示框垂直居中
 let tipsHeight = document.getElementById("tips").offsetHeight;
 document.getElementById("tips").style.marginTop =
   (windowHeight - tipsHeight) / 2 + "px";
@@ -77,7 +77,10 @@ function Confirm() {
         .then(res => {
           window.location.href = "complete.html";
         })
-        .catch(err => {
+        .catch(error => {
+          if(error.res.status == 400){
+            document.getElementById('error').innerText = err.res.statusText;
+          }
           disable = false;
         });
     }
