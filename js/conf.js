@@ -8,6 +8,7 @@ const ongoingMonth = 11;
 const ongoingDate = 30;
 
 var loaded = false; // 网页是否加载完成
+var isOngoing = true; // 是否还在活动时间
 
 // 向window.onload中添加新的函数
 function addOnloadEvent(func) {
@@ -46,6 +47,7 @@ function checkTime() {
     (month <= 11 && date < 20)
   ) {
     // 不在活动时间
+    isOngoing = false;
     if (loaded) {
       showOngoingTips();
     } else {
@@ -53,6 +55,7 @@ function checkTime() {
     }
     return false;
   } else {
+    isOngoing = true;
     return true;
   }
 }
@@ -95,6 +98,7 @@ function checkStatus(res) {
     case 410:
       // 活动不在进行
       // dom已加载完成则直接执行，否则添加到window.onload中
+      isOngoing = false;
       if (loaded) {
         showOngoingTips();
       } else {
@@ -131,7 +135,7 @@ fetch(prefix + "/match", {
       case 0:
         // 匹配成功
         window.localStorage.setItem("match", 0);
-        window.localStorage.setItem("result",JSON.stringify(res.data));
+        window.localStorage.setItem("result", JSON.stringify(res.data));
         break;
       case 1:
         // 还未填写信息

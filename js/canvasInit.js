@@ -6,6 +6,11 @@ if (
   window.location.href = "result.html";
 }
 
+// 在活动时间则不显示规则弹窗
+if (isOngoing) {
+  document.getElementById("tips").style.visibility = "visible";
+}
+
 var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
 var canvas, ctx, padHeight, padTop;

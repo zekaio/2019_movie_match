@@ -35,6 +35,7 @@ body {
   z-index: 10000;
   width: 80vw;
   margin: 0 10vw;
+  visibility: hidden;
 }
 
 .tips_header {
