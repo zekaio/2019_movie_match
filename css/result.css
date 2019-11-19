@@ -25,15 +25,9 @@ body {
   margin-top: 15%;
 }
 
-
 .matching {
-  /* display: block; */
   width: fit-content;
   margin-left: 18vw;
-}
-
-.success {
-  /* display: block; */
 }
 
 .text2 {

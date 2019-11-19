@@ -2,7 +2,7 @@ function setResult() {
   switch (window.localStorage.getItem("match")) {
     case "0":
       //匹配成功
-      let result =JSON.parse(window.localStorage.getItem("result"));
+      let result = JSON.parse(window.localStorage.getItem("result"));
       document.getElementById("nickname").innerText = result.nickname;
       document.getElementById("grade").innerText = result.grade;
       document.getElementById("gender").innerText = result.gender;
@@ -43,11 +43,11 @@ function setResult() {
           }
           setResult();
         });
-        break;
+      break;
   }
 }
 setResult();
 
-function back(){
+function back() {
   window.location.href = homePage;
 }
