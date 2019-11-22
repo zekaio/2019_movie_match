@@ -79,7 +79,7 @@ function Confirm() {
         })
         .catch(error => {
           if(error.res.status == 400){
-            document.getElementById('error').innerText = err.res.statusText;
+            document.getElementById('error').innerText = error.res.statusText;
           }
           disable = false;
         });
